@@ -148,7 +148,7 @@ _call to mode dat = do
             ++ "` from `" ++ show to ++ "`"
         Just x -> return x
   where
-    txdata from = Call from to Nothing Nothing Nothing (Just (toData dat))
+    txdata from = Call from to (Just "0x0") Nothing Nothing (Just (toData dat))
 
 -- | Zero value is used to send transaction without money
 nopay :: Wei
